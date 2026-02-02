@@ -1,77 +1,15 @@
-import random
-x = random.randint(10,100)
+print('WELCOME \n ARE YOU READY FOR A NUMVENTURE')
+print('''You just have to guess the number correctly to win
+      set of rules;
+      There are 3 helplines avilaible for each round.
+      Just enter the number of the helpline which you wish to use.
+      The answer of your hints are based on the most recent hint you guessed.
+      You can choose your own helpline from the following set:
+      
+      1. Is the number even or odd?
+      2. What is the number in ones place?
+      3. Is the number at tens place even or odd?
+      4. How many numbers far am i from the correct answer?
+      5. Is my guess too high or too low as compared to correct answer? ''')
 
-
-def hints(n,x,g):
-    if n == 1 :
-        if x % 2 != 0 :
-            print("Odd")
-        else:
-            print("Even")
-
-    elif n == 2 :
-        print(x%10)
-
-    elif n == 3 :
-        if (x // 10) % 2 != 0:
-            print("Odd")
-        else:
-            print('Else')
-
-    elif n == 4 :
-        print(abs(g-x))
-
-    elif n == 5 :
-        if g > x:
-            print('High')
-        else :
-            print('Low')
-    else :
-        print('INVALID NUMBER')
-
-def process_hints(g,x):
-    hint_no = int(input("Enter the hint number you want to use :"))
-    hints(hint_no,x,g)
-
-
-
-
-def game():
-        #Initial guess
-        g = int(input("Enter your double digit lucky number : "))
-        if g == x :
-            print('YOU WIN!!')
-            return
-
-        #First hint
-        process_hints(g,x)
-
-        #First guess
-        g = int(input("Enter your First guess :"))
-        if g == x :
-            print('YOU WIN!!')
-            return
-
-        #Second hint
-        process_hints(g,x)
-
-
-        #Second guess
-        g = int(input("Enter your Second guess :"))
-        if g == x :
-            print('YOU WIN!!')
-            return
-
-
-        #Third hint 
-        process_hints(g,x)
-
-
-        #Third guess
-        g = int(input("Enter your Third guess :"))
-        if g == x :
-            print('YOU WIN!!')
-        else :
-            print('YOU LOOSE \n Correct Answer ', x)
-
-game()
+print('ALL THE BEST!')
